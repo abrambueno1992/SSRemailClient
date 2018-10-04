@@ -13,7 +13,6 @@ export const fetchMessagesAction = (start, end) => {
     string = root + string;
     return async (dispatch) => {
         await fetch(string)
-            // const data = await response.json()
             .then((data) => {
                 return data.json()
             })
@@ -31,9 +30,6 @@ export const fetchMessagesAction = (start, end) => {
                     nothing: true
                 })
             })
-        // const data = await response.json();
-
-
     }
 }
 
@@ -42,7 +38,6 @@ export const fetchPersonAction = (email) => {
     let emailToString = email.toString();
     let root = 'https://morning-falls-3769.herokuapp.com/api/people/';
     root += emailToString
-    // console.log('data', emailToString, root)
     return async (dispatch) => {
         await fetch(root)
             .then((data) => {
@@ -62,12 +57,6 @@ export const fetchPersonAction = (email) => {
                     nothing: true
                 })
             })
-        // const data = await response.json();
-        // dispatch({
-        //     type: FETCH_PERSON,
-        //     payload: data,
-        // })
-
     }
 }
 

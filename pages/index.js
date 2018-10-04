@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import { bindActionCreators } from 'redux';
 import {connect} from "react-redux";
 import {fetchMessagesAction, fetchPersonAction} from '../actions/actions'
-// import './index.css';
-// import Card from './Card';
+
 
 class Index extends Component {
     
@@ -17,21 +16,10 @@ class Index extends Component {
         }
     }
     static async getInitialProps ({Component, store }) {
-        // console.log('component',store.getState())
-        // console.log('PROPS',this.props, this.state)
         await store.dispatch(fetchMessagesAction(0, 20))
-        // if (store.getState().messages !== null) {
-        //     store.getState().messages.map( async each => {
-        //         console.log(each.from.toString(), await store.dispatch(fetchPersonAction(each.from)))
-        //         // store.dispatch(fetchPersonAction(each.from))
-        //     })
-        // }
-        console.log('component',store.getState().persons)
-        // store.dispatch(AddAction())
     }
     increaseIndex = () => {
-        // this.setState({start: this.state.index, index: this.state.index + 20})
-        // this.callActions();
+        
         this.handleFetchPersons()
 
     }
@@ -59,7 +47,7 @@ class Index extends Component {
       
     }
     componentDidUpdate = (prevProps, prevState) => {
-        if (prevProps.messages !== this.props.messages && this.state.tryCounter2 < 5) {
+        if (prevProps.messages !== this.props.messages && this.props.persons.length === 0 && this.state.tryCounter2 < 5) {
             this.handleFetchPersons();
         }
     }
@@ -68,13 +56,11 @@ class Index extends Component {
     handleFetchPersons = () => {
         console.log('handle persons fired')
         this.props.messages.map(async each => {
-            // console.log(each.from.toString())
             await this.props.fetchPersonAction(each.from)
         })
     }
     
     render() {
-        // console.log('checking', this.props, this.state)
       return (
         <div>
           <h1>Hello, this is an email app.</h1>
