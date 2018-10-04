@@ -11,13 +11,22 @@ class Index extends Component {
         super(props);
         this.state = {
             index : 20,
-            start: 0
+            start: 0,
+            tryCounter: 0,
+            tryCounter2: 0
         }
     }
     static async getInitialProps ({Component, store }) {
-        console.log('component',Component)
+        // console.log('component',store.getState())
+        // console.log('PROPS',this.props, this.state)
         await store.dispatch(fetchMessagesAction(0, 20))
-
+        // if (store.getState().messages !== null) {
+        //     store.getState().messages.map( async each => {
+        //         console.log(each.from.toString(), await store.dispatch(fetchPersonAction(each.from)))
+        //         // store.dispatch(fetchPersonAction(each.from))
+        //     })
+        // }
+        console.log('component',store.getState().persons)
         // store.dispatch(AddAction())
     }
     increaseIndex = () => {
@@ -26,19 +35,36 @@ class Index extends Component {
         this.handleFetchPersons()
 
     }
-    callActions = (start, end) => {
+    callActions = () => {
+        console.log('fired get message', this.state.tryCounter)
         this.props.fetchMessagesAction(this.state.start, this.state.index)
     }
-    componentDidUpdate = (prevProps, prevState) => {
-        console.log('testing CSUP', this.props.messages)
-      if (this.props.messages !== prevProps.messages) {
-        this.handleFetchPersons()
+    componentDidMount = () => {
+      if (this.props.error !== null || this.props.messages.error) {
+          console.log(this.props.error)
+          if (this.props.messages === null && this.state.tryCounter < 5) {
+              this.callActions();
+              let current = this.state.tryCounter + 1;
+              this.setState({tryCounter: current})
+          }
+          if (this.props.messages.error !== null && this.state.tryCounter < 5) {
+            this.callActions();
+            let current = this.state.tryCounter + 1;
+            this.setState({tryCounter: current})
+        }
       }
-      if (this.props.messages.error !== null) {
-        //   this.props.fetchMessagesAction()
-        this.callActions();
+      if (this.props.messages.length > 0 && this.props.error === null && this.props.persons.length === 0) {
+          this.handleFetchPersons();
       }
+      
     }
+    componentDidUpdate = (prevProps, prevState) => {
+        if (prevProps.messages !== this.props.messages && this.state.tryCounter2 < 5) {
+            this.handleFetchPersons();
+        }
+    }
+    
+    
     handleFetchPersons = () => {
         console.log('handle persons fired')
         this.props.messages.map(async each => {
@@ -48,7 +74,7 @@ class Index extends Component {
     }
     
     render() {
-        console.log('checking', this.props, this.state)
+        // console.log('checking', this.props, this.state)
       return (
         <div>
           <h1>Hello, this is an email app.</h1>
