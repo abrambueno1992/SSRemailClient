@@ -1,15 +1,23 @@
-import {FETCH_MESSAGES} from '../actions/actions'
+import {FETCH_MESSAGES, FETCH_PERSON} from '../actions/actions'
 const startState = {
     nothing: true,
-    agencies: ''
+    messages: null,
+    persons: [],
+    error: null
 }
 const reducer = (state = startState, action) => {
     switch (action.type) {
         case FETCH_MESSAGES:
             return (Object.assign({}, state, {
-                agencies: action.payload,
+                messages: action.payload,
                 nothing: action.nothing
             }))
+            case FETCH_PERSON:
+            return (Object.assign({}, state, {
+                persons: [...state.persons, action.payload],
+                // nothing: action.nothing
+            }))
+
         default: 
             return state
     }
