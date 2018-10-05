@@ -1,0 +1,56 @@
+
+/* Desktop */
+@media only screen and (max-width: 1920px) {
+    .MainSide {
+        color: red;
+    }
+}
+/* Desktop */
+@media only screen and (max-width: 1680px) {
+    .MainSide {
+        color: red;
+    }
+}
+
+/* Laptop */
+@media only screen and (max-width: 1440px) {
+    .MainSide {
+        color: red;
+    }
+}
+/* Ipad Pro */
+@media only screen and (max-width: 1024px) {
+    .MainSide {
+        color: red;
+    }
+}
+/* Ipad */
+@media only screen and (max-width: 768px) {
+    .MainSide {
+        color: red;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 415px) {
+    .MainSide {
+        color: red;
+    }
+}
+/* Mobile */
+@media only screen and (max-width: 375px) {
+    .MainSide {
+        /* color: yellow; */
+        background: #deee;
+        
+    }
+    .PersonName {
+        font-size: 1em;
+        margin-bottom: 0;
+        /* border: 1px solid blue; */
+    }
+    .Img {
+        width: 35%;
+        height: 35%;
+        border: 1px solid black
+    }
+}

@@ -1,9 +1,12 @@
-import { FETCH_MESSAGES, FETCH_PERSON, ERROR } from '../actions/actions'
+import { DONE_FETCHING, FETCH_MESSAGES, FETCH_PERSON, ERROR } from '../actions/actions';
+import { REORGANIZE } from '../actions/localActions'
 const startState = {
     nothing: true,
     messages: null,
     persons: [],
-    error: null
+    error: null,
+    ending: false,
+    organized: false
 }
 const reducer = (state = startState, action) => {
     switch (action.type) {
@@ -15,8 +18,17 @@ const reducer = (state = startState, action) => {
         case FETCH_PERSON:
             return (Object.assign({}, state, {
                 persons: [...state.persons, action.payload],
-                // nothing: action.nothing
             }))
+        case DONE_FETCHING:
+            return Object.assign({}, state, {
+                ending: action.payload
+            });
+        case REORGANIZE:
+            return Object.assign({}, state, {
+                persons: action.persons,
+                messages: action.messages,
+                organized: action.organized
+            })
         case ERROR:
             return (Object.assign({}, state, {
                 error: action.payload,

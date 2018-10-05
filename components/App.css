@@ -1,0 +1,64 @@
+
+/* Desktop */
+@media only screen and (max-width: 1920px) {
+    
+}
+/* Desktop */
+@media only screen and (max-width: 1680px) {
+    
+}
+
+/* Laptop */
+@media only screen and (max-width: 1440px) {
+    
+}
+/* Ipad Pro */
+@media only screen and (max-width: 1024px) {
+    
+}
+/* Ipad */
+@media only screen and (max-width: 768px) {
+    .MainApp {
+        border: 1px solid gray;
+        margin: 10px 0;
+        font-size: 1em;
+        text-align: left;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .Subject {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .From {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 415px) {
+    
+}
+/* Mobile */
+@media only screen and (max-width: 375px) {
+    .MainApp {
+        border: 1px solid gray;
+        margin: 10px 0;
+        font-size: 1em;
+        text-align: left;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .Subject {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .From {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        
+    }
+}

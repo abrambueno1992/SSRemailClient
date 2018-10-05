@@ -1,0 +1,56 @@
+
+/* Desktop */
+@media only screen and (max-width: 1920px) {
+    .MainContainer {
+        text-align: center;
+        color: gray;
+    }
+}
+/* Desktop */
+@media only screen and (max-width: 1680px) {
+    .MainContainer {
+        text-align: center;
+        color: red;
+    }
+}
+
+/* Laptop */
+@media only screen and (max-width: 1440px) {
+    .MainContainer {
+        text-align: center;
+        color: orange;
+    }
+}
+/* Ipad Pro */
+@media only screen and (max-width: 1024px) {
+    .MainContainer {
+        text-align: center;
+        color: yellow;
+    }
+}
+/* Ipad */
+@media only screen and (max-width: 768px) {
+    .MainContainer {
+        text-align: center;
+        color: green;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 415px) {
+    .MainContainer {
+        text-align: center;
+        color: rebeccapurple;
+    }
+}
+/* Mobile */
+@media only screen and (max-width: 375px) {
+    .MainContainer {
+        text-align: center;
+        color: blue;
+    }
+}
+
+
+
+
+
