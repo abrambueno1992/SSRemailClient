@@ -7,13 +7,13 @@ import './Navigation.css'
 const Navigation = () => {
     return (
         <div className="Nav">
-            <ul className="breadcrumb">
-                <li>
-                    <Link href="/">
+            <Link href="/">
+                <ul className="breadcrumb">
+                    <li>
                         <a>Home</a>
-                    </Link>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </Link>
         </div>
     )
 }

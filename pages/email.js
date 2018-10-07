@@ -129,7 +129,7 @@ class Email extends Component {
             }
 
           <div className="EmailBody">
-            <div>Body:{this.props.messages[index].body}</div>
+            <div>{this.props.messages[index].body}</div>
 
           </div>
 

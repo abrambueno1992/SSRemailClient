@@ -40,38 +40,47 @@
 }
 /*Mobile */
 @media only screen and (max-width: 415px) {
-    
-}
-/* Mobile */
-@media only screen and (max-width: 375px) {
+    Body {
+        background: beige;
+    }
     .EmailHeader {
         /* color: blue; */
-        border: 1px solid red;
+        /* border: 1px solid red; */
+        margin-top: 2%;
         width: 90%;
         overflow-wrap: break-word;
         margin-left: 5%;
         margin-bottom: 2%;
+        border: 1px solid black;
+        background: whitesmoke;
+        box-sizing: border-box;
+        padding: 10px 10px; 
     }
     .EmailDetailstrue {
         margin-left: 5%;
         cursor: pointer;
+        background: rgba(221, 221, 221, 0.431);
+        color: coral;
     }
     .EmailDetailstrue:hover {
-        background: beige;
+        /* background: beige; */
     }
     .EmailDetailsfalse{
         margin-left: 5%;
         cursor: pointer;
+        background: rgba(221, 221, 221, 0.431);
     
     }
     .EmailDetailsfalse:hover {
-        background: beige;
+        /* background: beige; */
     }
     .EmailCC {
         color: black;
         width: 90%;
         margin-left: 5%;
-        border: 2px solid rebeccapurple;
+        font-family: cursive
+        
+        /* border: 2px solid rebeccapurple; */
         
 
     }
@@ -79,19 +88,108 @@
         color: black;
         width: 90%;
         margin-left: 5%;
-        border: 2px solid rebeccapurple;
+        background: rgb(221, 221, 221);
+        /* border: 2px solid rebeccapurple; */
     }
     .EmailSubject {
         color: black;
+        text-decoration: underline;
         width: 90%;
         margin-left: 5%;
-        border: 2px solid rebeccapurple;
+        /* background: goldenrod; */
+        /* border: 2px solid rebeccapurple; */
     }
     .EmailBody {
-        color: orange;
+        margin-top: 5%;
+        color: navy;
         width: 90%;
         margin-left: 5%;
-        border: 2px solid rebeccapurple;
+        box-sizing: border-box;
+        background: whitesmoke;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+        text-align: left;
+        border: 1px solid black;
+        padding: 10px 10px; 
+        font-family: 'Times New Roman', Times, serif
+        /* border: 2px solid rebeccapurple; */
+    }
+}
+/* Mobile */
+@media only screen and (max-width: 375px) {
+    Body {
+        background: beige;
+    }
+    .EmailHeader {
+        /* color: blue; */
+        /* border: 1px solid red; */
+        margin-top: 2%;
+        width: 90%;
+        overflow-wrap: break-word;
+        margin-left: 5%;
+        margin-bottom: 2%;
+        border: 1px solid black;
+        background: whitesmoke;
+        box-sizing: border-box;
+        padding: 10px 10px; 
+    }
+    .EmailDetailstrue {
+        margin-left: 5%;
+        cursor: pointer;
+        background: rgba(221, 221, 221, 0.431);
+        color: coral;
+    }
+    .EmailDetailstrue:hover {
+        /* background: beige; */
+    }
+    .EmailDetailsfalse{
+        margin-left: 5%;
+        cursor: pointer;
+        background: rgba(221, 221, 221, 0.431);
+    
+    }
+    .EmailDetailsfalse:hover {
+        /* background: beige; */
+    }
+    .EmailCC {
+        color: black;
+        width: 90%;
+        margin-left: 5%;
+        font-family: cursive
+        
+        /* border: 2px solid rebeccapurple; */
+        
+
+    }
+    .EmailFrom {
+        color: black;
+        width: 90%;
+        margin-left: 5%;
+        background: rgb(221, 221, 221);
+        /* border: 2px solid rebeccapurple; */
+    }
+    .EmailSubject {
+        color: black;
+        text-decoration: underline;
+        width: 90%;
+        margin-left: 5%;
+        /* background: goldenrod; */
+        /* border: 2px solid rebeccapurple; */
+    }
+    .EmailBody {
+        margin-top: 5%;
+        color: navy;
+        width: 90%;
+        margin-left: 5%;
+        box-sizing: border-box;
+        background: whitesmoke;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+        text-align: left;
+        border: 1px solid black;
+        padding: 10px 10px; 
+        font-family: 'Times New Roman', Times, serif
+        /* border: 2px solid rebeccapurple; */
     }
     
 }

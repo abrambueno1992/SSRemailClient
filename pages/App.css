@@ -39,7 +39,28 @@
 }
 /*Mobile */
 @media only screen and (max-width: 415px) {
-    
+    .MainApp {
+        border: 1px solid gray;
+        margin: 10px 0;
+        font-size: 1em;
+        text-align: left;
+        width: 95%;
+        margin-left: 2.5%;
+        cursor: pointer;
+        background: rgb(240, 240, 240)
+    }
+    .Subject {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .From {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        
+    }
 }
 /* Mobile */
 @media only screen and (max-width: 375px) {
@@ -51,6 +72,7 @@
         width: 95%;
         margin-left: 2.5%;
         cursor: pointer;
+        background: rgb(240, 240, 240)
     }
     .Subject {
         font-size: 1em;

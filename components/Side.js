@@ -85,14 +85,12 @@ class Side extends Component {
     }
     render() {
         if (this.props.organized === true) {
-            // if (this.state.query === false) {
-            console.log(this.state.list)
             return (
                 <div className="MainSide">
                     <input
                         type="text"
                         name="search"
-                        placeholder="Search for person"
+                        placeholder="𝖰 Search for person"
                         value={this.state.search}
                         onChange={this.handleInput}
                         className="InputSearch"
@@ -113,7 +111,7 @@ class Side extends Component {
                             <ul>
                                 {this.state.list.map((each, i) => {
                                     return (
-                                        <li onClick={() => this.handleAvatar(i)} key={each.email} name={i}>
+                                        <li onClick={() => this.handleAvatar(i)} key={each.email + i} name={i}>
                                             {each.name}
                                         </li>
                                     )
@@ -122,13 +120,7 @@ class Side extends Component {
                         </div>}
                 </div>
             )
-            // } else {
-            //     return (
-            //         <div>
-            //             Searching
-            //         </div>
-            //     )
-            // }
+            
 
         } else {
             return (

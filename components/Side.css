@@ -33,28 +33,47 @@
 /*Mobile */
 @media only screen and (max-width: 415px) {
     .MainSide {
-        color: red;
-    }
-}
-/* Mobile */
-@media only screen and (max-width: 375px) {
-    .MainSide {
         /* color: yellow; */
         background: #deee;
         
     }
-    .InputSeach {
+    .InputSearch {
 
+        margin-top: 2%;
+        margin-bottom: 1.5%;
+        background-color: white;
+        /* background-image: 👽; */
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding-left: 20px;
+        width: 40%;
     }
     .BtnSearch {
-        display: inline;
-        
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: navy;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 3px #999;
+
     }
+    .BtnSearch:hover {background-color: #3e8e41}
+
+    .BtnSearch:active {
+    background-color: blue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}   
     .PersonName {
         font-size: 1em;
         margin-bottom: 0;
         color: navy;
-        /* border: 1px solid blue; */
     }
     .CompanyName {
         font-size: 1em;
@@ -64,6 +83,56 @@
     .Img {
         width: 35%;
         height: 35%;
-        /* border: 1px solid black */
+    }
+}
+/* Mobile */
+@media only screen and (max-width: 375px) {
+    .MainSide {
+        /* color: yellow; */
+        background: #deee;
+        
+    }
+    .InputSearch {
+        margin-top: 2%;
+        background-color: white;
+        /* background-image: 👽; */
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding-left: 40px;
+    }
+    .BtnSearch {
+        display: inline-block;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: navy;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 3px #999;
+
+    }
+    .BtnSearch:hover {background-color: #3e8e41}
+
+    .BtnSearch:active {
+    background-color: blue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}   
+    .PersonName {
+        font-size: 1em;
+        margin-bottom: 0;
+        color: navy;
+    }
+    .CompanyName {
+        font-size: 1em;
+        margin-bottom: 0;
+        color: black;
+    }
+    .Img {
+        width: 35%;
+        height: 35%;
     }
 }
