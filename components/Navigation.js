@@ -8,11 +8,11 @@ const Navigation = () => {
     return (
         <div className="Nav">
             <Link href="/">
-                <ul className="breadcrumb">
-                    <li>
+                <div className="breadcrumb">
+                    {/* <li> */}
                         <a>Home</a>
-                    </li>
-                </ul>
+                    {/* </li> */}
+                </div>
             </Link>
         </div>
     )

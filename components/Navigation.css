@@ -19,7 +19,36 @@
 }
 /* Ipad */
 @media only screen and (max-width: 768px) {
-   
+    .Nav {
+        height: 1em;
+        display: flex;
+        width: 50%;
+        margin-left: 25%;
+        background: beige;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .breadcrumb {
+        background: #eee;
+        width: 100%;
+        /* margin-left: 25%;
+        margin-right: 25%; */
+        cursor: pointer;
+        text-decoration-color: blue;
+        color: blue;
+        text-decoration: underline;
+        /* height: 1%; */
+        /* text-align: center; */
+        list-style: none;
+        /* border: 1px solid beige; */
+    }
+
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
 }
 /*Mobile */
 @media only screen and (max-width: 415px) {

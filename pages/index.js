@@ -104,8 +104,14 @@ class Index extends Component {
                     </Head>
                     {/* <Navigation /> */}
                     {/* {console.log('url', this.props)} */}
+                    <div className="SideComponent">
                     <Side />
+                    </div>
+                    
+                    <div className="AppComponent">
                     <App />
+                    </div>
+                    
 
                 </div>
             )

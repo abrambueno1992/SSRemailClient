@@ -19,24 +19,83 @@
 }
 /* Ipad */
 @media only screen and (max-width: 768px) {
-    /* .MainApp {
-        border: 1px solid gray;
-        margin: 10px 0;
-        font-size: 1em;
-        text-align: left;
-        width: 80%;
-        margin-left: 10%;
+    Body {
+        background: beige;
     }
-    .Subject {
-        font-size: 1em;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+    .EmailHeader {
+        /* color: blue; */
+        /* border: 1px solid red; */
+        margin-top: 2%;
+        width: 90%;
+        overflow-wrap: break-word;
+        margin-left: 5%;
+        margin-bottom: 2%;
+        border: 1px solid black;
+        background: whitesmoke;
+        box-sizing: border-box;
+        padding: 10px 10px; 
     }
-    .From {
-        font-size: 1em;
-        margin-bottom: 0.5em;
+    .EmailDetailstrue {
+        margin-left: 5%;
+        cursor: pointer;
+        background: rgba(221, 221, 221, 0.431);
+        color: coral;
+    }
+    .EmailDetailstrue:hover {
+        /* background: beige; */
+    }
+    .EmailDetailsfalse{
+        margin-left: 5%;
+        cursor: pointer;
+        text-decoration-color: blue;
+        color: blue;
+        text-decoration: underline;
+        background: rgba(221, 221, 221, 0.431);
+    
+    }
+    .EmailDetailsfalse:hover {
+        /* background: beige; */
+    }
+    .EmailCC {
+        color: black;
+        width: 90%;
+        margin-left: 5%;
+        font-family: cursive
         
-    } */
+        /* border: 2px solid rebeccapurple; */
+        
+
+    }
+    .EmailFrom {
+        color: black;
+        width: 90%;
+        margin-left: 5%;
+        background: rgb(221, 221, 221);
+        /* border: 2px solid rebeccapurple; */
+    }
+    .EmailSubject {
+        color: black;
+        text-decoration: underline;
+        width: 90%;
+        margin-left: 5%;
+        /* background: goldenrod; */
+        /* border: 2px solid rebeccapurple; */
+    }
+    .EmailBody {
+        margin-top: 5%;
+        color: navy;
+        width: 90%;
+        margin-left: 5%;
+        box-sizing: border-box;
+        background: whitesmoke;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+        text-align: left;
+        border: 1px solid black;
+        padding: 10px 10px; 
+        font-family: 'Times New Roman', Times, serif
+        /* border: 2px solid rebeccapurple; */
+    }
 }
 /*Mobile */
 @media only screen and (max-width: 415px) {
@@ -69,6 +128,9 @@
         margin-left: 5%;
         cursor: pointer;
         background: rgba(221, 221, 221, 0.431);
+        text-decoration-color: blue;
+        color: blue;
+        text-decoration: underline;
     
     }
     .EmailDetailsfalse:hover {
@@ -146,6 +208,9 @@
         margin-left: 5%;
         cursor: pointer;
         background: rgba(221, 221, 221, 0.431);
+        text-decoration-color: blue;
+        color: blue;
+        text-decoration: underline;
     
     }
     .EmailDetailsfalse:hover {
