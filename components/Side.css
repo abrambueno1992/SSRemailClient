@@ -43,14 +43,27 @@
         background: #deee;
         
     }
+    .InputSeach {
+
+    }
+    .BtnSearch {
+        display: inline;
+        
+    }
     .PersonName {
         font-size: 1em;
         margin-bottom: 0;
+        color: navy;
         /* border: 1px solid blue; */
+    }
+    .CompanyName {
+        font-size: 1em;
+        margin-bottom: 0;
+        color: black;
     }
     .Img {
         width: 35%;
         height: 35%;
-        border: 1px solid black
+        /* border: 1px solid black */
     }
 }

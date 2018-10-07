@@ -1,0 +1,97 @@
+
+
+/* Desktop */
+@media only screen and (max-width: 1920px) {
+    
+}
+/* Desktop */
+@media only screen and (max-width: 1680px) {
+    
+}
+
+/* Laptop */
+@media only screen and (max-width: 1440px) {
+    
+}
+/* Ipad Pro */
+@media only screen and (max-width: 1024px) {
+    
+}
+/* Ipad */
+@media only screen and (max-width: 768px) {
+    /* .MainApp {
+        border: 1px solid gray;
+        margin: 10px 0;
+        font-size: 1em;
+        text-align: left;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .Subject {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .From {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        
+    } */
+}
+/*Mobile */
+@media only screen and (max-width: 415px) {
+    
+}
+/* Mobile */
+@media only screen and (max-width: 375px) {
+    .EmailHeader {
+        /* color: blue; */
+        border: 1px solid red;
+        width: 90%;
+        overflow-wrap: break-word;
+        margin-left: 5%;
+        margin-bottom: 2%;
+    }
+    .EmailDetailstrue {
+        margin-left: 5%;
+        cursor: pointer;
+    }
+    .EmailDetailstrue:hover {
+        background: beige;
+    }
+    .EmailDetailsfalse{
+        margin-left: 5%;
+        cursor: pointer;
+    
+    }
+    .EmailDetailsfalse:hover {
+        background: beige;
+    }
+    .EmailCC {
+        color: black;
+        width: 90%;
+        margin-left: 5%;
+        border: 2px solid rebeccapurple;
+        
+
+    }
+    .EmailFrom {
+        color: black;
+        width: 90%;
+        margin-left: 5%;
+        border: 2px solid rebeccapurple;
+    }
+    .EmailSubject {
+        color: black;
+        width: 90%;
+        margin-left: 5%;
+        border: 2px solid rebeccapurple;
+    }
+    .EmailBody {
+        color: orange;
+        width: 90%;
+        margin-left: 5%;
+        border: 2px solid rebeccapurple;
+    }
+    
+}

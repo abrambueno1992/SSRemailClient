@@ -3,6 +3,7 @@ export const FETCH_MESSAGES = 'FETCH_MESSAGES';
 export const FETCH_PERSON = 'FETCH_PERSON';
 export const ERROR = 'ERROR';
 export const DONE_FETCHING = 'DONE_FETCHING';
+export const DONE_MESSAGES = 'DONE_MESSAGES';
 
 export const fetchMessagesAction = (start, end) => {
     let string = '';
@@ -21,7 +22,7 @@ export const fetchMessagesAction = (start, end) => {
                 dispatch({
                     type: FETCH_MESSAGES,
                     payload: res,
-                    nothing: false
+                    nothing: false,
                 })
             })
             .catch(err => {
@@ -63,6 +64,15 @@ export const doneAction = () => {
     return dispatch => {
         dispatch({
             type: DONE_FETCHING,
+            payload: true
+        })
+    }
+}
+
+export const doneMessagesAction = () => {
+    return dispatch => {
+        dispatch({
+            type: DONE_MESSAGES,
             payload: true
         })
     }

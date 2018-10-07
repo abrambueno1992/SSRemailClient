@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {reorganizeAction} from '../actions/localActions';
+import { reorganizeAction } from '../actions/localActions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './App.css';
+import Link from 'next/link';
 
 class App extends Component {
     constructor(props) {
@@ -11,7 +12,8 @@ class App extends Component {
             messages: '',
             persons: '',
             sorted: false,
-            count: 0
+            count: 0,
+            
         }
     }
     /**
@@ -36,31 +38,33 @@ class App extends Component {
         }
     }
     componentDidMount = () => {
-        if (this.props.end === true) {
+        if (this.props.fetchPersonsComplete === true && this.props.organized === false) {
             const sortedMessages = this.props.messages.sort(this.dynamicSort('from'));
             let sortedPersons = this.props.persons.sort(this.dynamicSort('email'))
             let count = this.state.count + 1;
             this.props.reorganizeAction(sortedPersons, sortedMessages)
-            this.setState({messages: sortedMessages, persons: sortedPersons, sorted: true})
+            this.setState({ messages: sortedMessages, persons: sortedPersons, sorted: true })
         }
-        
+
     }
     componentDidUpdate = (prevProps, prevState) => {
-    
+
     }
-    
+
 
     render() {
-        if (this.state.sorted === true) {
-            const persons = this.state.persons
+        if (this.props.organized === true) {
+            const persons = this.props.persons
             return (
                 <div>
-                    {this.state.messages.map(((each,i) => {
+                    {this.props.messages.map(((each, i) => {
                         return (
-                            <div className="MainApp">
-                                <div className="Subject">{each.subject}</div>
-                                <div className="From">{persons[i].name}</div>
-                            </div>
+                            <Link key={each + i} as={`/email/${i}`}  href={`/email`}>
+                                <div key={each} className="MainApp">
+                                    <div className="Subject">{each.subject}</div>
+                                    <div className="From">{persons[i].name}</div>
+                                </div>
+                            </Link>
                         )
                     }))}
                 </div>
@@ -72,7 +76,7 @@ class App extends Component {
                 </div>
             )
         }
-        
+
     }
 }
 const mapDisPatchToProps = dispatch => {
@@ -84,7 +88,8 @@ const mapStateToProps = state => {
     return {
         messages: state.messages,
         persons: state.persons,
-        end: state.ending
+        fetchPersonsComplete: state.fetchPersonsComplete,
+        organized: state.organized
     }
 }
 export default connect(mapStateToProps, mapDisPatchToProps)(App);

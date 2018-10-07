@@ -1,0 +1,53 @@
+
+
+/* Desktop */
+@media only screen and (max-width: 1920px) {
+    
+}
+/* Desktop */
+@media only screen and (max-width: 1680px) {
+    
+}
+
+/* Laptop */
+@media only screen and (max-width: 1440px) {
+    
+}
+/* Ipad Pro */
+@media only screen and (max-width: 1024px) {
+    
+}
+/* Ipad */
+@media only screen and (max-width: 768px) {
+   
+}
+/*Mobile */
+@media only screen and (max-width: 415px) {
+    
+}
+/* Mobile */
+@media only screen and (max-width: 375px) {
+    .Nav {
+        height: 1em;
+        display: flex;
+        width: 80%;
+        margin-left: 10%;
+        background: beige;
+        align-content: center;
+        align-items: center;
+    }
+    .breadcrumb {
+        background: #eee;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        /* height: 1%; */
+        /* text-align: center; */
+        list-style: none;
+        /* border: 1px solid beige; */
+    }
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
+}

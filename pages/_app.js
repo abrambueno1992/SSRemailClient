@@ -1,12 +1,13 @@
 import React from "react";
-import {createStore, applyMiddleware} from "redux";
-import {Provider} from "react-redux";
-import App, {Container} from "next/app";
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import App, { Container } from "next/app";
 import withRedux from "next-redux-wrapper";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
+// import { BrowserRouter as Router } from 'react-router-dom';
 import reducer from '../reducers/reducers'
-
+import { withRouter } from 'next/router'
 
 /**
 * @param {object} initialState
@@ -23,23 +24,31 @@ const makeStore = (initialState) => {
 
 class MyApp extends App {
 
-    static async getInitialProps({Component, ctx}) {
+    static async getInitialProps({ Component, ctx }) {
 
         // we can dispatch from here too
 
         const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
         // console.log(ctx)
         console.log('props', pageProps)
-        return {pageProps};
+        return { pageProps };
 
     }
 
     render() {
-        const {Component, pageProps, store} = this.props;
+        const { Component, pageProps, store, router } = this.props;
+        const { asPath, pathname, query } = router
+    const url = {
+      asPath,
+      pathname,
+      query
+    }
         return (
             <Container>
                 <Provider store={store}>
-                    <Component {...pageProps} />
+                    {/* <Router> */}
+                        <Component {...pageProps} url={url} />
+                    {/* </Router> */}
                 </Provider>
             </Container>
         );
