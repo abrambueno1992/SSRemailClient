@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
 import { doneAction, fetchMessagesAction, fetchPersonAction } from '../actions/actions'
-import { reorganizeAction } from '../actions/localActions';
+import { reorganizeAction, chosenPersonAction } from '../actions/localActions';
 import Head from 'next/head'
 import Navigation from '../components/Navigation';
 import './Email.css'
@@ -24,8 +24,7 @@ class Email extends Component {
     }
   }
   static async getInitialProps({ store, query, pathname }) {
-
-
+    
   }
 
   callActions = () => {
@@ -69,6 +68,9 @@ class Email extends Component {
       this.props.reorganizeAction(sortedPersons, sortedMessages)
       this.setState({ messages: sortedMessages, persons: sortedPersons, sorted: true })
     }
+    if (this.props.personChosen === null && prevProps.organized !== this.props.organized === true) {
+      this.props.chosenPersonAction(this.props.persons[0])
+    }
   }
   /**
 * Function to sort alphabetically an array of objects by some specific key.
@@ -97,14 +99,11 @@ class Email extends Component {
 
 
   render() {
-    // console.log('Email props', this.props, Link)
-    // console.log('URL path', this.props.url.asPath[this.props.url.asPath.length - 1])
     if (this.props.organized === true) {
-      const index = parseInt(this.props.url.asPath[this.props.url.asPath.length - 1], 10);
-
+      let filtered = this.props.url.asPath.slice(7, this.props.url.asPath.length);
+      const index = parseInt(filtered, 10)
       return (
         <div>
-          {/* <Link href="/"> */}
           <Head>
             <title>This page has a title 🤔</title>
             <meta charSet='utf-8' />
@@ -121,19 +120,16 @@ class Email extends Component {
               <div className="EmailCC">CC: <span>{this.props.messages[index].cc}</span></div>
               <div className="EmailFrom">From: {this.props.messages[index].from}</div>
             </div>
-            : 
+            :
             <div className="EmailHeader">
-            <div className="EmailFrom">From: {this.props.messages[index].from}</div>
-            <span className={`EmailDetails${this.state.cc}`} onClick={this.handleCC}>View Details</span> 
+              <div className="EmailFrom">From: {this.props.messages[index].from}</div>
+              <span className={`EmailDetails${this.state.cc}`} onClick={this.handleCC}>View Details</span>
             </div>
-            }
+          }
 
           <div className="EmailBody">
             <div>{this.props.messages[index].body}</div>
-
           </div>
-
-
         </div>
       )
     } else {
@@ -152,7 +148,8 @@ const mapDisPatchToProps = dispatch => {
     fetchMessagesAction: bindActionCreators(fetchMessagesAction, dispatch),
     fetchPersonAction: bindActionCreators(fetchPersonAction, dispatch),
     doneAction: bindActionCreators(doneAction, dispatch),
-    reorganizeAction: bindActionCreators(reorganizeAction, dispatch)
+    reorganizeAction: bindActionCreators(reorganizeAction, dispatch),
+    chosenPersonAction: bindActionCreators(chosenPersonAction, dispatch)
 
   }
 }
@@ -163,7 +160,8 @@ const mapStateToProps = (state) => {
     persons: state.persons,
     error: state.error,
     fetchPersonsComplete: state.fetchPersonsComplete,
-    organized: state.organized
+    organized: state.organized,
+    personChosen: state.personChosen,
   }
 }
 

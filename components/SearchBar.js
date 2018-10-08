@@ -105,7 +105,7 @@ class SearchBar extends Component {
     render() {
         if (this.props.organized === true) {
             return (
-                <div className="MainSide">
+                <div>
                     <input
                         type="text"
                         name="search"

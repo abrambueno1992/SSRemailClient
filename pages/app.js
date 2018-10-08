@@ -58,14 +58,14 @@ class App extends Component {
             return (
                 <div>
                     {this.props.messages.map(((each, i) => {
-                        return (
-                            <Link key={each + i} as={`/email/${i}`}  href={`/email`}>
-                                <div key={each} className="MainApp">
-                                    <div className="Subject">{each.subject}</div>
-                                    <div className="From">{persons[i].name}</div>
-                                </div>
-                            </Link>
-                        )
+                            return (
+                                <Link key={each + i} as={`/email/${i}`}  href={`/email`}>
+                                    <div key={each} className="MainApp">
+                                        <div className="Subject">{each.subject}</div>
+                                        <div className="From">{persons[i].name}</div>
+                                    </div>
+                                </Link>
+                            )
                     }))}
                 </div>
             )
