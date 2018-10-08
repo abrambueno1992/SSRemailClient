@@ -42,19 +42,19 @@ class PersonCompany extends Component {
         
     }
     componentDidMount = () => {
-        // if (this.props.organized === true && this.props.personChosen === null) {
-        //     let company;
-        //     if (this.props.persons[0].company) {
-        //         company = this.props.persons[0].company.name
-        //     } else {
-        //         company = 'No Company'
-        //     }
-        //     this.setState({
-        //         currentPerson: this.props.persons[0].name,
-        //         currentAvatar: this.props.persons[0].avatar,
-        //         currentCompany: company
-        //     })
-        // }
+        if (this.props.organized === true && this.props.personChosen === null) {
+            let company;
+            if (this.props.persons[0].company) {
+                company = this.props.persons[0].company.name
+            } else {
+                company = 'No Company'
+            }
+            this.setState({
+                currentPerson: this.props.persons[0].name,
+                currentAvatar: this.props.persons[0].avatar,
+                currentCompany: company
+            })
+        }
 
     }
     
