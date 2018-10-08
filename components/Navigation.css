@@ -1,17 +1,135 @@
 
+@media only screen and (min-width: 1921px) { 
+    .Nav {
+        height: 1em;
+        display: flex;
+        width: 50%;
+        margin-left: 25%;
+        background: beige;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .breadcrumb {
+        background: #eee;
+        width: 100%;
+        /* margin-left: 25%;
+        margin-right: 25%; */
+        cursor: pointer;
+        text-decoration-color: blue;
+        color: blue;
+        text-decoration: underline;
+        /* height: 1%; */
+        /* text-align: center; */
+        list-style: none;
+        /* border: 1px solid beige; */
+    }
 
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
+}
 /* Desktop */
 @media only screen and (max-width: 1920px) {
+    .Nav {
+        height: 1em;
+        display: flex;
+        width: 50%;
+        margin-left: 25%;
+        background: beige;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
     
+    .breadcrumb {
+        background: #eee;
+        width: 100%;
+        /* margin-left: 25%;
+        margin-right: 25%; */
+        cursor: pointer;
+        text-decoration-color: blue;
+        color: blue;
+        text-decoration: underline;
+        /* height: 1%; */
+        /* text-align: center; */
+        list-style: none;
+        /* border: 1px solid beige; */
+    }
+
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
 }
 /* Desktop */
 @media only screen and (max-width: 1680px) {
+    .Nav {
+        height: 1em;
+        display: flex;
+        width: 50%;
+        margin-left: 25%;
+        background: beige;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
     
+    .breadcrumb {
+        background: #eee;
+        width: 100%;
+        /* margin-left: 25%;
+        margin-right: 25%; */
+        cursor: pointer;
+        text-decoration-color: blue;
+        color: blue;
+        text-decoration: underline;
+        /* height: 1%; */
+        /* text-align: center; */
+        list-style: none;
+        /* border: 1px solid beige; */
+    }
+
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
 }
 
 /* Laptop */
 @media only screen and (max-width: 1440px) {
+    .Nav {
+        height: 1em;
+        display: flex;
+        width: 50%;
+        margin-left: 25%;
+        background: beige;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
     
+    .breadcrumb {
+        background: #eee;
+        width: 100%;
+        /* margin-left: 25%;
+        margin-right: 25%; */
+        cursor: pointer;
+        text-decoration-color: blue;
+        color: blue;
+        text-decoration: underline;
+        /* height: 1%; */
+        /* text-align: center; */
+        list-style: none;
+        /* border: 1px solid beige; */
+    }
+
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
 }
 /* Ipad Pro */
 @media only screen and (max-width: 1024px) {

@@ -106,6 +106,7 @@ class SearchBar extends Component {
         if (this.props.organized === true) {
             return (
                 <div>
+                    <div className="SearchBar">
                     <input
                         type="text"
                         name="search"
@@ -115,6 +116,8 @@ class SearchBar extends Component {
                         className="InputSearch"
                     />
                     <button className="BtnSearch" onClick={this.handleSubmit}>Search</button>
+                    </div>
+                    
                     {this.state.query === false ?
                         <div>
                            

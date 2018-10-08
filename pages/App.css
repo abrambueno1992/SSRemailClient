@@ -1,20 +1,128 @@
+@media only screen and (min-width: 1921px) { 
+    .MainApp {
+        border: 1px solid black;
+        margin: 10px 0;
+        font-size: 1em;
+        text-align: left;
+        width: 100%;
+        margin-left: 1.5%;
+        cursor: pointer;
+        background: rgb(240, 240, 240)
+    }
+    .SearchBarCompApp {
+        display: block;
 
+    }
+    .Subject {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .From {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        
+    }
+}
 /* Desktop */
 @media only screen and (max-width: 1920px) {
-    
+    .MainApp {
+        border: 1px solid black;
+        margin: 10px 0;
+        font-size: 1em;
+        text-align: left;
+        width: 100%;
+        margin-left: 1.5%;
+        cursor: pointer;
+        background: rgb(240, 240, 240)
+    }
+    .SearchBarCompApp {
+        display: block;
+
+    }
+    .Subject {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .From {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        
+    }
 }
 /* Desktop */
 @media only screen and (max-width: 1680px) {
-    
+    .MainApp {
+        border: 1px solid black;
+        margin: 10px 0;
+        font-size: 1em;
+        text-align: left;
+        width: 100%;
+        margin-left: 1.5%;
+        cursor: pointer;
+        background: rgb(240, 240, 240)
+    }
+    .SearchBarCompApp {
+        display: block;
+
+    }
+    .Subject {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .From {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        
+    }
 }
 
 /* Laptop */
 @media only screen and (max-width: 1440px) {
     
+    .MainApp {
+        border: 1px solid black;
+        margin: 10px 0;
+        font-size: 1em;
+        text-align: left;
+        width: 100%;
+        margin-left: 1.5%;
+        cursor: pointer;
+        background: rgb(240, 240, 240)
+    }
+    .SearchBarCompApp {
+        display: block;
+
+    }
+    .Subject {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .From {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        
+    }
 }
 /* Ipad Pro */
 @media only screen and (max-width: 1024px) {
-    
+    .SearchBarCompApp {
+        display: none;
+    };
+    .MainApp {
+        margin-left: 0%;
+    }
 }
 /* Ipad */
 @media only screen and (max-width: 768px) {

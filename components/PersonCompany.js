@@ -6,7 +6,10 @@ import './Side.css'
 const PersonCompany = props => {
     return (
         <div className="MainSide">
+        <div className="SearchBarComponent">
         <SearchBar />
+        </div>
+        
         {props.personChosen !== null ?
         <div>
             <div className="PersonName">

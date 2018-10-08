@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './App.css';
 import Link from 'next/link';
+import SearchBar from '../components/SearchBar';
 
 class App extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class App extends Component {
             persons: '',
             sorted: false,
             count: 0,
-            
+
         }
     }
     /**
@@ -57,15 +58,19 @@ class App extends Component {
             const persons = this.props.persons
             return (
                 <div>
+                    <div className="SearchBarCompApp">
+                        <SearchBar />
+                    </div>
+
                     {this.props.messages.map(((each, i) => {
-                            return (
-                                <Link key={each + i} as={`/email/${i}`}  href={`/email`}>
-                                    <div key={each} className="MainApp">
-                                        <div className="Subject">{each.subject}</div>
-                                        <div className="From">{persons[i].name}</div>
-                                    </div>
-                                </Link>
-                            )
+                        return (
+                            <Link key={each + i} as={`/email/${i}`} href={`/email`}>
+                                <div key={each} className="MainApp">
+                                    <div className="Subject">{each.subject}</div>
+                                    <div className="From">{persons[i].name}</div>
+                                </div>
+                            </Link>
+                        )
                     }))}
                 </div>
             )
