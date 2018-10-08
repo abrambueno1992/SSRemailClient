@@ -7,6 +7,7 @@ import App from './app';
 import './index.css'
 import Head from 'next/head'
 import Navigation from '../components/Navigation';
+import PersonCompany from '../components/PersonCompany';
 
 class Index extends Component {
     constructor(props) {
@@ -105,7 +106,8 @@ class Index extends Component {
                     {/* <Navigation /> */}
                     {/* {console.log('url', this.props)} */}
                     <div className="SideComponent">
-                    <Side />
+                    <PersonCompany />
+                    {/* <Side /> */}
                     </div>
                     
                     <div className="AppComponent">
