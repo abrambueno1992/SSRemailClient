@@ -40,20 +40,37 @@ class SearchBar extends Component {
         })
     }
     componentDidUpdate = (prevProps, prevState) => {
-        
-        if (prevProps.organized !== this.props.organized) {
+        //If organized && no person chose/ Default person
+        if (prevProps.organized !== this.props.organized && this.props.personChosen === null) {
             let company;
             if (this.props.persons[0].company) {
                 company = this.props.persons[0].company.name
             } else {
                 company = 'No Company'
-            }
+            };
+            this.props.chosenPersonAction(this.props.persons[0])
             this.setState({
                 currentPerson: this.props.persons[0].name,
                 currentAvatar: this.props.persons[0].avatar,
                 currentCompany: company,
             })
         }
+        // If a person is chosen, not null, not the default
+        if (prevProps.personChosen !== this.props.personChosen && this.props.personChosen !== null) {
+            let company;
+            if (this.props.personChosen.company) {
+                company = this.props.personChosen.company.name
+            } else {
+                company = 'No Company'
+            }
+            this.setState({
+                currentPerson: this.props.personChosen.name,
+                currentAvatar: this.props.personChosen.avatar,
+                currentCompany: company,
+            })
+        }
+        
+
     }
     componentDidMount = () => {
 
@@ -74,7 +91,6 @@ class SearchBar extends Component {
 
 
     handleSubmit = () => {
-
         let newregex = new RegExp(this.state.search, 'gi')
         const temp = [];
         this.props.persons.map(each => {
@@ -101,13 +117,7 @@ class SearchBar extends Component {
                     <button className="BtnSearch" onClick={this.handleSubmit}>Search</button>
                     {this.state.query === false ?
                         <div>
-                            {/* <div className="PersonName">
-                                Person: {this.state.currentPerson}
-                            </div>
-                            <div className="CompanyName">
-                                Company: {this.state.currentCompany}
-                            </div>
-                            <img className="Img" src={this.state.currentAvatar} /> */}
+                           
                         </div>
                         :
                         <div>
@@ -137,9 +147,9 @@ class SearchBar extends Component {
 }
 const mapStateToProps = state => {
     return {
-        messages: state.messages,
         persons: state.persons,
-        organized: state.organized
+        organized: state.organized,
+        personChosen: state.personChosen
     }
 }
 const mapDisPatchToProps = dispatch => {

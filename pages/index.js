@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
 import { doneAction, fetchMessagesAction, fetchPersonAction, doneMessagesAction } from '../actions/actions'
-import Side from '../components/Side';
 import App from './app';
 import './index.css'
 import Head from 'next/head'
-import Navigation from '../components/Navigation';
 import PersonCompany from '../components/PersonCompany';
 
 class Index extends Component {
@@ -103,11 +101,9 @@ class Index extends Component {
                         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                         {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"></meta> */}
                     </Head>
-                    {/* <Navigation /> */}
-                    {/* {console.log('url', this.props)} */}
+                    
                     <div className="SideComponent">
                     <PersonCompany />
-                    {/* <Side /> */}
                     </div>
                     
                     <div className="AppComponent">

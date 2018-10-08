@@ -9,9 +9,7 @@ const Navigation = () => {
         <div className="Nav">
             <Link href="/">
                 <div className="breadcrumb">
-                    {/* <li> */}
                         <a>Home</a>
-                    {/* </li> */}
                 </div>
             </Link>
         </div>
