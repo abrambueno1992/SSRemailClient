@@ -24,7 +24,7 @@ class Email extends Component {
     }
   }
   static async getInitialProps({ store, query, pathname }) {
-    
+
   }
 
   callActions = () => {
@@ -105,9 +105,9 @@ class Email extends Component {
       return (
         <div>
           <Head>
-            <title>This page has a title 🤔</title>
+            <title>Robo Hash Email 🤖</title>
             <meta charSet='utf-8' />
-            <meta name="description" content="That's it!" />
+            <meta name="description" content="Robot email" />
             <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
             {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"></meta> */}
           </Head>

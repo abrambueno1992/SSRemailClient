@@ -19,7 +19,7 @@ class SearchBar extends Component {
         e.preventDefault();
         this.setState({
             [e.target.name]: e.target.value.toLowerCase(),
-            query: true
+            
         });
     }
     handleAvatar = (i) => {
@@ -100,7 +100,7 @@ class SearchBar extends Component {
 
             }
         })
-        this.setState({ list: temp })
+        this.setState({ list: temp, query: true })
     }
     render() {
         if (this.props.organized === true) {
@@ -124,6 +124,7 @@ class SearchBar extends Component {
                         </div>
                         :
                         <div>
+                            <h3>Choose person to display information</h3>
                             <ul>
                                 {this.state.list.map((each, i) => {
                                     return (

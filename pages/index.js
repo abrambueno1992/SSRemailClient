@@ -31,7 +31,6 @@ class Index extends Component {
     componentDidMount = () => {
         if (this.props.messages === null && this.props.fetchMessagesComplete === false && this.state.tryCounter < 5) {
             if (this.props.fetchMessagesComplete === false) {
-                console.log('this is CDM cond 1', this.props.fetchMessagesComplete)
                 this.callActions();
                 let current = this.state.tryCounter + 1;
                 this.setState({ tryCounter: current })
@@ -40,7 +39,6 @@ class Index extends Component {
         }
         if (this.props.messages && this.props.messages.error !== undefined && this.props.fetchMessagesComplete === false && this.state.tryCounter < 5) {
             if (this.props.fetchMessagesComplete === false) {
-                console.log('this is CDM cond 2', this.props.fetchMessagesComplete)
                 this.callActions();
                 let current = this.state.tryCounter + 1;
                 this.setState({ tryCounter: current })
@@ -69,14 +67,11 @@ class Index extends Component {
         }
         if (prevProps.messages !== this.props.messages && this.props.messages.length === 1 && this.props.fetchMessagesComplete === false) {
             if (this.props.fetchMessagesComplete === false) {
-                console.log('this is CWUP', this.props.fetchMessagesComplete)
                 this.callActions();
             }
 
         }
-        // if (this.state.end === false && this.props.persons.length === this.props.messages.length) {
-        //     this.setState({ end: true })
-        // }
+        
         if (prevProps.persons !== this.props.persons && this.props.messages.length === this.props.persons.length) {
             this.props.doneAction()
         }
@@ -95,9 +90,9 @@ class Index extends Component {
             return (
                 <div className="MainContainer" >
                     <Head>
-                        <title>This page has a title 🤔</title>
+                        <title>Robo Hash Email 🤖</title>
                         <meta charSet='utf-8' />
-                        <meta name="description" content="That's it!" />
+                        <meta name="description" content="Robot email" />
                         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                         {/* <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"></meta> */}
                     </Head>
